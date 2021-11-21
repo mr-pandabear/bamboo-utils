@@ -1,5 +1,5 @@
 #!/bin/bash
-pkill -9 -f bin/server
+sudo service pandacoin stop
 cd ~
 rm -rf panda-coin
 git clone https://github.com/mr-pandabear/panda-coin.git
@@ -11,4 +11,5 @@ conan install .. --build=libcurl
 cd ..
 cmake .
 make all
-nohup ./bin/server &
+sudo service pandacoin stop
+sudo service pandacoin start

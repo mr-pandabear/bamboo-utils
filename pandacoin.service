@@ -1,0 +1,16 @@
+[Unit]
+Description=PandaCoin
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/ubuntu/panda-coin
+ExecStart=/home/ubuntu/panda-coin/bin/server /var/log/panda.log
+
+[Install]
+WantedBy=multi-user.target

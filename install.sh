@@ -8,20 +8,16 @@ sudo apt-get -y install libtool
 sudo apt-get -y install python3-pip
 sudo apt-get -y install libleveldb-dev
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
-cd secp256k1
-./autogen.sh
-./configure
-make
-make install 
-cd ..
 git clone https://github.com/mr-pandabear/panda-coin.git
 cd panda-coin
 pip3 install conan
 mkdir build
 mkdir data
 cd build
-conan install .. --build=libcurl
+sudo conan install .. --build=libcurl
 cd ..
 cmake .
 make all
-nohup ./bin/server &
+sudo cp /home/ubuntu/panda-utils/pandacoin.service /etc/systemd/system/pandacoin.service
+sudo systemctl daemon-reload
+sudo service pandacoin start
