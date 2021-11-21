@@ -7,7 +7,7 @@ cd panda-coin
 mkdir build
 mkdir data
 cd build
-sudo conan install .. --build=libcurl
+sudo conan install .. --build=libcurl > /dev/null
 cd ..
 cmake .
 make server
