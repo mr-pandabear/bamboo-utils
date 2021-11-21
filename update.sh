@@ -1,14 +1,9 @@
 #!/bin/bash
 sudo service pandacoin stop
-cd /home/ubuntu
-sudo rm -rf panda-coin
-git clone https://github.com/mr-pandabear/panda-coin.git
-cd panda-coin
-mkdir build
+cd /home/ubuntu/panda-coin
+git pull
+sudo rm -rf data
 mkdir data
-cd build
-sudo conan install .. --build=libcurl > /dev/null
-cd ..
-cmake .
-make server
+sudo cmake .
+sudo make server
 sudo service pandacoin start
