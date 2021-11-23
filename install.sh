@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo apt-get update
-git clone https://github.com/bitcoin-core/secp256k1
 sudo apt-get -y install make  
 sudo apt-get -y install cmake  
 sudo apt-get -y install automake
