@@ -13,10 +13,9 @@ sudo pip3 install conan
 mkdir build
 mkdir data
 cd build
-sudo conan install .. --build=libcurl
+sudo conan install .. 
 cd ..
 cmake .
-make all
-sudo cp /home/ubuntu/panda-utils/pandacoin.service /etc/systemd/system/pandacoin.service
-sudo systemctl daemon-reload
+make server
+sudo curl https://raw.githubusercontent.com/mr-pandabear/panda-utils/master/pandacoin.service > /etc/systemd/system/pandacoin.service
 sudo service pandacoin start
