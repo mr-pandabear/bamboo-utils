@@ -26,4 +26,4 @@ conan install ..
 cd ..
 cmake .
 make server
-nohup ./bin/server &
+nohup ./bin/server --testnet &
