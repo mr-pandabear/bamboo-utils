@@ -2,4 +2,9 @@
 
 To install node to testnet:
 
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mr-pandabear/panda-utils/master/install.sh)"```
+## Ubuntu
+
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mr-pandabear/panda-utils/master/test-node-ubuntu.sh)"```
+
+## Centos8
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mr-pandabear/panda-utils/master/test-node-centos.sh)"```
