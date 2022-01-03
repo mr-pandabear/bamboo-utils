@@ -26,5 +26,4 @@ conan install ..
 cd ..
 cmake .
 make server
-sudo sh -c 'curl https://raw.githubusercontent.com/mr-pandabear/panda-utils/master/pandacoin.service > /etc/systemd/system/pandacoin.service'
-sudo service pandacoin start
+nohup ./bin/server &
