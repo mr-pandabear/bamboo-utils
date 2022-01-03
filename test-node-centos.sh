@@ -7,7 +7,12 @@ sudo yum -y install libtool
 sudo yum -y install python3-pip
 sudo yum -y install libleveldb-dev
 sudo yum -y install git
+sudo yum -y install wget
 sudo yum -y groupinstall 'Development Tools'
+wget https://download-ib01.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/l/leveldb-1.22-1.el8.x86_64.rpm
+sudo yum localinstall -y leveldb-1.22-1.el8.x86_64.rpm
+wget https://download-ib01.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/l/leveldb-devel-1.22-1.el8.x86_64.rpm
+sudo yum localinstall -y leveldb-devel-1.22-1.el8.x86_64.rpm
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
 git clone https://github.com/mr-pandabear/panda-coin.git
 cd panda-coin
