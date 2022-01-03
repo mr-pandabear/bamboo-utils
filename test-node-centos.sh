@@ -22,7 +22,7 @@ sudo pip3 install conan
 mkdir build
 mkdir data
 cd build
-sudo conan install .. 
+conan install .. 
 cd ..
 cmake .
 make server
