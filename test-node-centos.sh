@@ -16,8 +16,8 @@ sudo yum localinstall -y leveldb-devel-1.22-1.el8.x86_64.rpm
 sudo mkdir /usr/lib/x86_64-linux-gnu
 sudo cp /usr/lib64/libleveldb.so.1.22.0 /usr/lib/x86_64-linux-gnu/libleveldb.so
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
-git clone https://github.com/mr-pandabear/panda-coin.git
-cd panda-coin
+git clone https://github.com/mr-pandabear/bamboo.git
+cd bamboo
 sudo pip3 install conan
 mkdir build
 mkdir data
