@@ -1,5 +1,5 @@
 [Unit]
-Description=PandaCoin
+Description=Bamboo
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 
@@ -9,8 +9,8 @@ StartLimitBurst=5
 [Service]
 Restart=on-failure
 RestartSec=5s
-WorkingDirectory=/home/ubuntu/panda-coin
-ExecStart=/home/ubuntu/panda-coin/bin/server
+WorkingDirectory=/home/ubuntu/bamboo
+ExecStart=/home/ubuntu/bamboo/bin/server
 
 [Install]
 WantedBy=multi-user.target
