@@ -18,4 +18,4 @@ cd ..
 cmake .
 make server
 sudo sh -c 'curl https://raw.githubusercontent.com/mr-pandabear/bamboo-utils/master/bamboo.service > /etc/systemd/system/bamboo.service'
-sudo service pandacoin start
+sudo service bamboo start
